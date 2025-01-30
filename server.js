@@ -34,19 +34,19 @@ process.on('uncaughtException', (err) => {
 
 
 //callback hell Asynchronous method
-// fs.readFile(path.join(__dirname,'files','start.txt'), 'utf8',(err, data) => {
-//   if (err) throw err;
-//   console.log(data);
-// });
-// fs.writeFile(path.join(__dirname,'files','write.txt'), 'Hi guys,How are you guys',(err, data) => {
-//   if (err) throw err;
-//   console.log('File written successfully');
-//   fs.appendFile(path.join(__dirname,'files','write.txt'), ', Hope all of you are good!!',(err, data) => {
-//     if (err) throw err;
-//     console.log('append successfully');
-//     fs.rename(path.join(__dirname,'files','write.txt'), path.join(__dirname,'files','renameFile.txt'),(err) => {
-//       if (err) throw err;
-//       console.log('Rename successfully');
-//     });
-//   });
-// });
+fs.readFile(path.join(__dirname,'files','start.txt'), 'utf8',(err, data) => {
+  if (err) throw err;
+  console.log(data);
+});
+fs.writeFile(path.join(__dirname,'files','write.txt'), 'Hi guys,How are you guys',(err, data) => {
+  if (err) throw err;
+  console.log('File written successfully');
+  fs.appendFile(path.join(__dirname,'files','write.txt'), ', Hope all of you are good!!',(err, data) => {
+    if (err) throw err;
+    console.log('append successfully');
+    fs.rename(path.join(__dirname,'files','write.txt'), path.join(__dirname,'files','renameFile.txt'),(err) => {
+      if (err) throw err;
+      console.log('Rename successfully');
+    });
+  });
+});
